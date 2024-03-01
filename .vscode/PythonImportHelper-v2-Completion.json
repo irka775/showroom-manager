@@ -1,0 +1,47 @@
+[
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "cloud_name",
+        "kind": 5,
+        "importPath": ".devcontainer.build-assets.make_url",
+        "description": ".devcontainer.build-assets.make_url",
+        "peekOfCode": "cloud_name = re.findall(r\"['](.*?)[']\", content[15])[0]\napi_key = re.findall(r\"['](.*?)[']\", content[16])[0]\napi_secret = re.findall(r\"['](.*?)[']\", content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".devcontainer.build-assets.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "api_key",
+        "kind": 5,
+        "importPath": ".devcontainer.build-assets.make_url",
+        "description": ".devcontainer.build-assets.make_url",
+        "peekOfCode": "api_key = re.findall(r\"['](.*?)[']\", content[16])[0]\napi_secret = re.findall(r\"['](.*?)[']\", content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".devcontainer.build-assets.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "api_secret",
+        "kind": 5,
+        "importPath": ".devcontainer.build-assets.make_url",
+        "description": ".devcontainer.build-assets.make_url",
+        "peekOfCode": "api_secret = re.findall(r\"['](.*?)[']\", content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".devcontainer.build-assets.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def main():\n    pass",
+        "detail": "run",
+        "documentation": {}
+    }
+]
