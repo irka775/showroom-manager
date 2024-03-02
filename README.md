@@ -22,13 +22,13 @@ yet powerful console interface. This helps new users get acquainted with the app
   Design a user-friendly interface using color-coding and clear prompts to guide users
   through different actions such as adding, modifying, deleting, or viewing cars in the showroom.
 
-![Menu](assets\screenshots\app_screenshot.JPG "Menu screenshot")
+![Menu](assets/screenshots/app_screenshot.JPG "Menu screenshot")
 
 - **Add Car Functionality**:
   Allow users to add new cars to the showroom inventory by providing details such as brand, model,
   fuel type, engine size, transmission, year, mileage, color, and price.
 
-![Add car](assets\screenshots\addCar_screenshot.JPG "Add car screenshot")
+![Add car](assets/screenshots/addCar_screenshot.JPG "Add car screenshot")
 
 - **Modify Car Functionality**:
   Enable users to modify the details of existing cars in the showroom inventory.
@@ -40,13 +40,13 @@ yet powerful console interface. This helps new users get acquainted with the app
   Implement a feature to display all cars currently present in the showroom inventory.
   This functionality should show detailed information about each car, including its ID, brand, model, fuel type, etc.
 
-![Show cars](assets\screenshots\addCar_screenshot.JPG "Show cars screenshot")
+![Show cars](assets/screenshots/addCar_screenshot.JPG "Show cars screenshot")
 
 - **Total Cars Functionality**:
   Show the total number of cars present in the showroom inventory. This feature provides
   users with a quick overview of the current size of the inventory.
 
-![Total cars](assets\screenshots\totalCars_screenshot.JPG "Total cars screenshot")
+![Total cars](assets/screenshots/totalCars_screenshot.JPG "Total cars screenshot")
 
 - **Exit**:
   Exit the application.
