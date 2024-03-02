@@ -111,6 +111,15 @@
         "documentation": {}
     },
     {
+        "label": "exist",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def exist(path):\n    \"\"\"\n    Checks if a given path exists in the file system.\n    Returns:\n    - bool: True if the path exists, False otherwise.\n    \"\"\"\n    return os.path.exists(path)\n# ============================================================================\ndef main():\n    pass",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",

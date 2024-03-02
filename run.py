@@ -77,6 +77,18 @@ def clear_screen():
 
 # ============================================================================
 
+
+def exist(path):
+    """
+    Checks if a given path exists in the file system.
+
+    Returns:
+    - bool: True if the path exists, False otherwise.
+    """
+    return os.path.exists(path)
+
+
+# ============================================================================
 def main():
     pass
 
