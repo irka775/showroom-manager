@@ -152,7 +152,6 @@ def add_car(new_data):
     """
 
     global car_count
-    # car_count = str(car_count)
     car_count = str(len(showroom_data) + 1)
     new_data["ID"] = car_count
     mode = "a" if os.path.exists(file_name) else "w"

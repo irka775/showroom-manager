@@ -142,7 +142,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def add_car(new_data):\n    \"\"\"\n    Adds a new car's details to the showroom data and writes it to a file.\n    Parameters:\n    - new_data (dict): A dictionary containing the car's details to add.\n    - after (optional): Parameter not used in the function but could be\n      for specifying position.\n    \"\"\"\n    global car_count\n    # car_count = str(car_count)",
+        "peekOfCode": "def add_car(new_data):\n    \"\"\"\n    Adds a new car's details to the showroom data and writes it to a file.\n    Parameters:\n    - new_data (dict): A dictionary containing the car's details to add.\n    - after (optional): Parameter not used in the function but could be\n      for specifying position.\n    \"\"\"\n    global car_count\n    car_count = str(len(showroom_data) + 1)",
         "detail": "run",
         "documentation": {}
     },
