@@ -112,6 +112,33 @@ def validate_input(msg, data_type):
 
 
 # ============================================================================
+        
+def user_input(data_dict):
+    """
+    Collects user input for each key in a dictionary, excluding the 'ID' field.
+
+    Parameters:
+    -data_dict (dict): Dictionary template with keys representing data fields.
+
+    Returns:
+    -dict: A new dictionary populated with user input for each key.
+    """
+    new_data = {}
+    count = 0
+    for key, value in data_dict.items():
+        if key == "ID":
+            new_data[key] = ""
+        else:
+            count += 1
+            msg = f"{Fore.CYAN}{count}: Enter {key:<13}:\t".replace(" ", "-")
+
+            new_data[key] = validate_input(msg, value)
+    print()
+    return new_data
+
+
+# ============================================================================
+
 def main():
     pass
 

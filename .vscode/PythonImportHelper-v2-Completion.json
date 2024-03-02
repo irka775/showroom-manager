@@ -129,6 +129,15 @@
         "documentation": {}
     },
     {
+        "label": "user_input",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def user_input(data_dict):\n    \"\"\"\n    Collects user input for each key in a dictionary, excluding the 'ID' field.\n    Parameters:\n    -data_dict (dict): Dictionary template with keys representing data fields.\n    Returns:\n    -dict: A new dictionary populated with user input for each key.\n    \"\"\"\n    new_data = {}\n    count = 0",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
