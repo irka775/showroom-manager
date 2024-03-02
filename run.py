@@ -89,6 +89,29 @@ def exist(path):
 
 
 # ============================================================================
+
+
+def validate_input(msg, data_type):
+    while True:
+        user_input = input(msg)
+        if data_type == "alfabetic" and user_input.isalpha():
+            return user_input
+        elif data_type == "numeric" and user_input.isdigit():
+            return user_input
+        elif data_type == "alfanumeric" and user_input.isalnum():
+            return user_input
+        elif data_type == "float":
+            try:
+                float(user_input)
+                return user_input
+            except ValueError:
+                pass
+        print(Fore.RED + f"\rInput should be {data_type}. Try again.", end="")
+        input(Fore.RED + " Press Enter to continue...")
+        print("\r" + " " * 100, end="\r")
+
+
+# ============================================================================
 def main():
     pass
 
