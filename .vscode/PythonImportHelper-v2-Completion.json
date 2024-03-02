@@ -156,6 +156,15 @@
         "documentation": {}
     },
     {
+        "label": "save_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def save_data(file_path=file_name, cars=showroom_data):\n    \"\"\"\n    Saves the car data to a specified file.\n    Parameters:\n    - file_path: The file to write the car data to.\n    - cars: The list of car dictionaries to save.\n    \"\"\"\n    with open(file_path, \"w\", encoding=\"utf-8\") as file:\n        local_car_count = 0\n        file.write(f\"{header_line}\\n\")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",

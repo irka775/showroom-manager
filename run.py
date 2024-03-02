@@ -208,6 +208,30 @@ def load_data(what_file=file_name, what_array=showroom_data):
 # ============================================================================
 
 
+def save_data(file_path=file_name, cars=showroom_data):
+    """
+    Saves the car data to a specified file.
+
+    Parameters:
+    - file_path: The file to write the car data to.
+    - cars: The list of car dictionaries to save.
+    """
+    with open(file_path, "w", encoding="utf-8") as file:
+        local_car_count = 0
+        file.write(f"{header_line}\n")
+        for car in cars:
+            local_car_count += 1
+            for key, value in car.items():
+                format_key = f"{key:<12}".replace(" ", "-")
+                if key == "ID":
+                    car_value = str(local_car_count)
+                else:
+                    car_value = value.strip()
+                file.write(f"{format_key}:\t{car_value}\n")
+            file.write(f"{separator_line}\n")
+
+
+# ============================================================================
 def main():
     pass
 
