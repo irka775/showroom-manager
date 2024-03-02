@@ -123,11 +123,11 @@ I have manually tested this code by doing the following:
    pip install colorama num2words
    ```
 
-## License
-
 ## Usage
 
 Run the main Python script to start the Showroom Manager:
+
+## License
 
 ```bash
 python showroom_manager.py
