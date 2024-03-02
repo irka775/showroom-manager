@@ -147,6 +147,15 @@
         "documentation": {}
     },
     {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def load_data(what_file=file_name, what_array=showroom_data):\n    \"\"\"\n    Loads car data from a file into a list.\n    Parameters:\n    - what_file (str): The name of the file from which to load the data.\n    - what_array (list): The list to populate with the loaded car data.\n    \"\"\"\n    loaded_data = {}\n    count = 0\n    readable = False",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",

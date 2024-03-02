@@ -173,6 +173,41 @@ def add_car(new_data):
 # ============================================================================
 
 
+def load_data(what_file=file_name, what_array=showroom_data):
+    """
+    Loads car data from a file into a list.
+
+    Parameters:
+    - what_file (str): The name of the file from which to load the data.
+    - what_array (list): The list to populate with the loaded car data.
+    """
+    loaded_data = {}
+    count = 0
+
+    readable = False
+
+    if os.path.exists(file_name):
+        readable = bool(os.path.getsize(file_name) > 0)
+    else:
+        with open(file_name, "w"):
+            pass
+
+    if readable:
+        with open(what_file, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+            for line in lines:
+                if not line.startswith("="):
+                    key, value = line.split(":")
+                    loaded_data[key.strip("-")] = value.strip("\n")
+                elif not any(char.isalpha() for char in line):
+                    count += 1
+                    what_array.append(loaded_data)
+                    loaded_data = {}
+
+
+# ============================================================================
+
+
 def main():
     pass
 
