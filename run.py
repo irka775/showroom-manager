@@ -281,6 +281,22 @@ def show_car():
 
 
 # ============================================================================
+    
+def exit_showroom():
+    """
+    Displays a farewell message and exits the program.
+    """
+    clear_screen()
+    farewell_message = (
+        Fore.RED + "  Thank you for using the Showroom Manager!\n\n"
+        "  Wishing you all the best!"
+    )
+    print(farewell_message)
+    sleep(4)
+    clear_screen()
+
+
+# ============================================================================
 def main():
     pass
 

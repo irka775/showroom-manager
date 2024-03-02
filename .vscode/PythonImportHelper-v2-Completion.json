@@ -192,6 +192,15 @@
         "documentation": {}
     },
     {
+        "label": "exit_showroom",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def exit_showroom():\n    \"\"\"\n    Displays a farewell message and exits the program.\n    \"\"\"\n    clear_screen()\n    farewell_message = (\n        Fore.RED + \"  Thank you for using the Showroom Manager!\\n\\n\"\n        \"  Wishing you all the best!\"\n    )\n    print(farewell_message)",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
