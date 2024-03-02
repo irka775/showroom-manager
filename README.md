@@ -16,7 +16,7 @@ yet powerful console interface. This helps new users get acquainted with the app
   to guide users on how to use the different features of the show from the showroom inventory. Users should be able
   to specify the ID of the car they want to delete, and the corresponding car entry should be removed from the inventory.
 
-![Welcome msg](assets\screenshots\welcome_screenshot.JPG "Welcome message")
+![Welcome msg](assets/screenshots/welcome_screenshot.JPG "Welcome message")
 
 - **User-Friendly Interface**:
   Design a user-friendly interface using color-coding and clear prompts to guide users
