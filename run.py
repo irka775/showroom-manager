@@ -264,7 +264,8 @@ def remove_car(target_car):
 
 
 # ============================================================================
-    
+
+
 def show_car():
     """
     Displays all cars' details from the showroom data.
@@ -281,7 +282,8 @@ def show_car():
 
 
 # ============================================================================
-    
+
+
 def exit_showroom():
     """
     Displays a farewell message and exits the program.
@@ -297,9 +299,78 @@ def exit_showroom():
 
 
 # ============================================================================
-def main():
-    pass
 
+
+def welcome_message():
+    """
+    Prints a welcome message for the Showroom Manager application.
+    """
+    clear_screen()
+    welcome_text = (
+        f"{Fore.YELLOW}Welcome to the Showroom Manager!\n"
+        "This application helps you manage \na car"
+        "showroom's inventory. You can \nadd, modify, delete, and view cars\n"
+        "in the showroom. Navigate through \nthe menu by selecting"
+        "the corresponding \nnumber of the action you wish to \nperform."
+        "Let's make managing your \nshowroom inventory "
+        "effortless and efficient!"
+    )
+    print(welcome_text)
+
+
+# ============================================================================
+def main():
+    """
+    The main function to run the showroom manager program.
+    It presents a menu to the user and processes the selected action.
+    """
+    global car_count
+    welcome_message()
+    input("\nPress enter to start...")
+    clear_screen()
+    load_data(file_name, showroom_data)
+    car_count = len(showroom_data)
+    while True:
+        clear_screen()
+        print(Fore.LIGHTGREEN_EX + "Showroom Manager:\n")
+        print(menu_str)
+        choice = input(Fore.LIGHTGREEN_EX + "Select action from 1 to 6 : ")
+        print()
+        try:
+            if choice < "1" or choice > "6":
+                raise ValueError("Please select a valid option from 1 to 6.")
+
+            if choice == "1":
+                add_car(user_input(header))
+                message = (
+                    f"Look at that! Our showroom just got richer "
+                    f"with its {num2words(car_count, to='ordinal_num')} car. "
+                    "Press enter to continue this journey..."
+                )
+
+                input(Fore.LIGHTGREEN_EX + f"{message}")
+            elif choice == "2":
+                modify_car(
+                    input(Fore.CYAN + "Enter car id  to modify:\t"),
+                    user_input(header),
+                )
+            elif choice == "3":
+                remove_car(input(Fore.YELLOW + "Enter car id for delete:\t"))
+            elif choice == "4":
+                show_car()
+            elif choice == "5":
+                msg_count_car()
+            elif choice == "6":
+                exit_showroom()
+                break
+            else:
+                print("Invalid selection. Please try again.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            sleep(2)
+
+
+# ============================================================================
 
 if __name__ == "__main__":
     main()

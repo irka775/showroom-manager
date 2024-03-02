@@ -201,11 +201,20 @@
         "documentation": {}
     },
     {
+        "label": "welcome_message",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def welcome_message():\n    \"\"\"\n    Prints a welcome message for the Showroom Manager application.\n    \"\"\"\n    clear_screen()\n    welcome_text = (\n        f\"{Fore.YELLOW}Welcome to the Showroom Manager!\\n\"\n        \"This application helps you manage \\na car\"\n        \"showroom's inventory. You can \\nadd, modify, delete, and view cars\\n\"\n        \"in the showroom. Navigate through \\nthe menu by selecting\"",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    pass\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    \"\"\"\n    The main function to run the showroom manager program.\n    It presents a menu to the user and processes the selected action.\n    \"\"\"\n    global car_count\n    welcome_message()\n    input(\"\\nPress enter to start...\")\n    clear_screen()\n    load_data(file_name, showroom_data)",
         "detail": "run",
         "documentation": {}
     },
