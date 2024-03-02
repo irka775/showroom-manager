@@ -232,6 +232,55 @@ def save_data(file_path=file_name, cars=showroom_data):
 
 
 # ============================================================================
+
+
+def modify_car(target_car, new_dictionary):
+    """
+    Replaces an existing car's details in the showroom data with new details.
+
+    Parameters:
+    - file_name (str): The name of the file where the data is saved.
+    - target_car (int): The ID of the car to modify.
+    - new_dictionary (dict): A dictionary containing the new car details.
+    """
+
+    showroom_data.pop((int(target_car) - 1))
+    showroom_data.insert(int(target_car) - 1, new_dictionary)
+    save_data()
+
+
+# ============================================================================
+def remove_car(target_car):
+    """
+    Removes a car from the showroom data based on its ID.
+
+    Parameters:
+    - target_car (int): The ID of the car to remove.
+    """
+    showroom_data.pop((int(target_car) - 1))
+    save_data()
+    global car_count
+    car_count = len(showroom_data)
+
+
+# ============================================================================
+    
+def show_car():
+    """
+    Displays all cars' details from the showroom data.
+    Clears the screen before displaying and waits for user input to continue.
+    """
+    clear_screen()
+    print(Fore.LIGHTGREEN_EX + header_line)
+    for car in showroom_data:
+        for key, value in car.items():
+            print(Fore.YELLOW + f"{key:<12}---{value}".replace(" ", "-"))
+        print(Fore.LIGHTGREEN_EX + separator_line)
+    print(Fore.GREEN)
+    input("Press enter to continue...")
+
+
+# ============================================================================
 def main():
     pass
 

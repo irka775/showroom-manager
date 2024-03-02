@@ -165,6 +165,33 @@
         "documentation": {}
     },
     {
+        "label": "modify_car",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def modify_car(target_car, new_dictionary):\n    \"\"\"\n    Replaces an existing car's details in the showroom data with new details.\n    Parameters:\n    - file_name (str): The name of the file where the data is saved.\n    - target_car (int): The ID of the car to modify.\n    - new_dictionary (dict): A dictionary containing the new car details.\n    \"\"\"\n    showroom_data.pop((int(target_car) - 1))\n    showroom_data.insert(int(target_car) - 1, new_dictionary)",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "remove_car",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def remove_car(target_car):\n    \"\"\"\n    Removes a car from the showroom data based on its ID.\n    Parameters:\n    - target_car (int): The ID of the car to remove.\n    \"\"\"\n    showroom_data.pop((int(target_car) - 1))\n    save_data()\n    global car_count\n    car_count = len(showroom_data)",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "show_car",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def show_car():\n    \"\"\"\n    Displays all cars' details from the showroom data.\n    Clears the screen before displaying and waits for user input to continue.\n    \"\"\"\n    clear_screen()\n    print(Fore.LIGHTGREEN_EX + header_line)\n    for car in showroom_data:\n        for key, value in car.items():\n            print(Fore.YELLOW + f\"{key:<12}---{value}\".replace(\" \", \"-\"))",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
