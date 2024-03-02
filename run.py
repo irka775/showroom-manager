@@ -112,7 +112,8 @@ def validate_input(msg, data_type):
 
 
 # ============================================================================
-        
+
+
 def user_input(data_dict):
     """
     Collects user input for each key in a dictionary, excluding the 'ID' field.
@@ -138,6 +139,39 @@ def user_input(data_dict):
 
 
 # ============================================================================
+
+
+def add_car(new_data):
+    """
+    Adds a new car's details to the showroom data and writes it to a file.
+
+    Parameters:
+    - new_data (dict): A dictionary containing the car's details to add.
+    - after (optional): Parameter not used in the function but could be
+      for specifying position.
+    """
+
+    global car_count
+    # car_count = str(car_count)
+    car_count = str(len(showroom_data) + 1)
+    new_data["ID"] = car_count
+    mode = "a" if os.path.exists(file_name) else "w"
+
+    with open(file_name, mode, encoding="utf-8") as file:
+
+        if mode == "w" or os.path.getsize(file_name) == 0:
+            file.write(f"{header_line}\n")
+
+        for key, value in new_data.items():
+            format_key = f"{key:<12}".replace(" ", "-")
+            file.write(f"{format_key}:\t{car_count if key=='ID' else value}\n")
+
+        file.write(f"{separator_line}\n")
+    showroom_data.append(new_data)
+
+
+# ============================================================================
+
 
 def main():
     pass
