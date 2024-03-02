@@ -93,11 +93,110 @@
         "documentation": {}
     },
     {
+        "label": "msg_count_car",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def msg_count_car():\n    \"\"\"\n    Prints a message indicating the total number of cars in the showroom.\n    This total is converted to words for a friendly user interface.\n    \"\"\"\n    message = (\n        f\"Hey there! We've got {num2words(car_count).upper()} \"\n        \"awesome cars waiting for you in the showroom!\\n\"\n    )\n    print(Fore.RED + message)",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def clear_screen():\n    \"\"\"\n    Clears the console screen based on the operating system.\n    \"\"\"\n    # Check if the operating system is Windows\n    if os.name == \"nt\":\n        os.system(\"cls\")\n    else:\n        # Assume the operating system is Unix/Linux/Mac\n        os.system(\"clear\")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
         "description": "run",
         "peekOfCode": "def main():\n    pass\nif __name__ == \"__main__\":\n    main()",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "file_name = \"ireland_bray_showroom_stock.txt\"\nLOG_FILE_NAME = os.getenv(\"TASKS_LOG_PATH\", file_name)\nif os.path.isabs(LOG_FILE_NAME):\n    full_path = LOG_FILE_NAME\nelse:\n    desktop_path = Path.home() / \"Desktop\"\n    full_path = desktop_path / LOG_FILE_NAME\n# ============================================================================\nspace_menu_count = 2\nmenu_str = (",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_FILE_NAME",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "LOG_FILE_NAME = os.getenv(\"TASKS_LOG_PATH\", file_name)\nif os.path.isabs(LOG_FILE_NAME):\n    full_path = LOG_FILE_NAME\nelse:\n    desktop_path = Path.home() / \"Desktop\"\n    full_path = desktop_path / LOG_FILE_NAME\n# ============================================================================\nspace_menu_count = 2\nmenu_str = (\n    f\"{Fore.CYAN}1:{' ' * space_menu_count}Add_car\\n\"",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "space_menu_count",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "space_menu_count = 2\nmenu_str = (\n    f\"{Fore.CYAN}1:{' ' * space_menu_count}Add_car\\n\"\n    f\"{Fore.CYAN}2:{' ' * space_menu_count}Modify_car\\n\"\n    f\"{Fore.YELLOW}3:{' ' * space_menu_count}Delete_car\\n\"\n    f\"{Fore.YELLOW}4:{' ' * space_menu_count}Show_Cars\\n\"\n    f\"{Fore.RED}5:{' ' * space_menu_count}Total_cars\\n\"\n    f\"{Fore.RED}6:{' ' * space_menu_count}Exit\\n\"\n)\nshowroom_data = []",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "menu_str",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "menu_str = (\n    f\"{Fore.CYAN}1:{' ' * space_menu_count}Add_car\\n\"\n    f\"{Fore.CYAN}2:{' ' * space_menu_count}Modify_car\\n\"\n    f\"{Fore.YELLOW}3:{' ' * space_menu_count}Delete_car\\n\"\n    f\"{Fore.YELLOW}4:{' ' * space_menu_count}Show_Cars\\n\"\n    f\"{Fore.RED}5:{' ' * space_menu_count}Total_cars\\n\"\n    f\"{Fore.RED}6:{' ' * space_menu_count}Exit\\n\"\n)\nshowroom_data = []\nheader_line = f\"{'='*23}  Showroom data  {'='*23}\"",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "showroom_data",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "showroom_data = []\nheader_line = f\"{'='*23}  Showroom data  {'='*23}\"\nseparator_line = \"=\" * 63\ncar_count = str(len(showroom_data))\nheader = {\n    \"ID\": \"\",\n    \"Brand\": \"alfabetic\",\n    \"Model\": \"alfanumeric\",\n    \"Fuel_Type\": \"alfabetic\",\n    \"Engine_Size\": \"float\",",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "header_line",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "header_line = f\"{'='*23}  Showroom data  {'='*23}\"\nseparator_line = \"=\" * 63\ncar_count = str(len(showroom_data))\nheader = {\n    \"ID\": \"\",\n    \"Brand\": \"alfabetic\",\n    \"Model\": \"alfanumeric\",\n    \"Fuel_Type\": \"alfabetic\",\n    \"Engine_Size\": \"float\",\n    \"Transmission\": \"alfabetic\",",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "separator_line",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "separator_line = \"=\" * 63\ncar_count = str(len(showroom_data))\nheader = {\n    \"ID\": \"\",\n    \"Brand\": \"alfabetic\",\n    \"Model\": \"alfanumeric\",\n    \"Fuel_Type\": \"alfabetic\",\n    \"Engine_Size\": \"float\",\n    \"Transmission\": \"alfabetic\",\n    \"Year\": \"numeric\",",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "car_count",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "car_count = str(len(showroom_data))\nheader = {\n    \"ID\": \"\",\n    \"Brand\": \"alfabetic\",\n    \"Model\": \"alfanumeric\",\n    \"Fuel_Type\": \"alfabetic\",\n    \"Engine_Size\": \"float\",\n    \"Transmission\": \"alfabetic\",\n    \"Year\": \"numeric\",\n    \"Mileage\": \"numeric\",",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "header",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "header = {\n    \"ID\": \"\",\n    \"Brand\": \"alfabetic\",\n    \"Model\": \"alfanumeric\",\n    \"Fuel_Type\": \"alfabetic\",\n    \"Engine_Size\": \"float\",\n    \"Transmission\": \"alfabetic\",\n    \"Year\": \"numeric\",\n    \"Mileage\": \"numeric\",\n    \"Color\": \"alfabetic\",",
         "detail": "run",
         "documentation": {}
     }
