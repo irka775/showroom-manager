@@ -187,7 +187,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def modify_car(target_car):\n    \"\"\"\n    Replaces an existing car's details in the showroom data with new details.\n    Parameters:\n    - file_name (str): The name of the file where the data is saved.\n    - target_car (int): The ID of the car to modify.\n    - new_dictionary (dict): A dictionary containing the new car details.\n    \"\"\"\n    while not target_car.isdigit():\n        target_car = input(Fore.RED + \"Input should be a number, enter car-ID again: \")",
+        "peekOfCode": "def modify_car(target_car):\n    \"\"\"\n    Replaces an existing car's details in the showroom data with new details.\n    Parameters:\n    - file_name (str): The name of the file where the data is saved.\n    - target_car (int): The ID of the car to modify.\n    - new_dictionary (dict): A dictionary containing the new car details.\n    \"\"\"\n    while not target_car.isdigit():\n        target_car = input(",
         "detail": "run",
         "documentation": {}
     },
@@ -196,7 +196,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def remove_car(target_car):\n    \"\"\"\n    Removes a car from the showroom data based on its ID.\n    Parameters:\n    - target_car (int): The ID of the car to remove.\n    \"\"\"\n    showroom_data.pop((int(target_car) - 1))\n    save_data()\n    global car_count\n    car_count = len(showroom_data)",
+        "peekOfCode": "def remove_car(target_car):\n    \"\"\"\n    Removes a car from the showroom data based on its ID.\n    Parameters:\n    - target_car (int): The ID of the car to remove.\n    \"\"\"\n    if target_car == \"exit\":\n        input(Fore.RED + \"Canceled,press enter to continue...\")\n        return\n    global car_count",
         "detail": "run",
         "documentation": {}
     },

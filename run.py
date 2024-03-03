@@ -61,7 +61,8 @@ def msg_count_car():
         "awesome cars waiting for you in the showroom!\n"
     )
     print(Fore.RED + message)
-    sleep(5)
+    input(Fore.RED + "Press Enter to continue...")
+
 
 
 # ============================================================================
@@ -263,7 +264,9 @@ def modify_car(target_car):
     - new_dictionary (dict): A dictionary containing the new car details.
     """
     while not target_car.isdigit():
-        target_car = input(Fore.RED + "Input should be a number, enter car-ID again: ")
+        target_car = input(
+            Fore.RED + "Input should be a number, enter car-ID again: /n"
+        )
     while int(target_car) <= 0 or int(target_car) > int(car_count):
         target_car = input(
             Fore.RED
@@ -289,10 +292,22 @@ def remove_car(target_car):
     Parameters:
     - target_car (int): The ID of the car to remove.
     """
+    if target_car == "exit":
+        input(Fore.RED + "Canceled,press enter to continue...")
+        return
+    global car_count
+    while int(target_car) > int(car_count) or int(target_car) <= 0:
+        target_car = input(
+            Fore.RED
+            + f"Can't find this ID,please enter number from 0 to {car_count}:\n"
+        )
+
     showroom_data.pop((int(target_car) - 1))
     save_data()
-    global car_count
     car_count = len(showroom_data)
+    input(
+        Fore.RED + f"Id {target_car} successfully deleted ,press enter to continue..."
+    )
 
 
 # ============================================================================
@@ -379,7 +394,7 @@ def main():
             elif choice == "2":
                 modify_car(input(Fore.CYAN + "Enter car id  to modify:\t"))
             elif choice == "3":
-                remove_car(input(Fore.YELLOW + "Enter car id for delete:\t"))
+                remove_car(input(Fore.YELLOW + "Enter car id for delete or write exit to cancell :\t"))
             elif choice == "4":
                 show_car()
             elif choice == "5":
