@@ -142,7 +142,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def validate_input(msg, data_type):\n    while True:\n        user_input = input(msg)\n        if data_type == \"alfabetic\" and user_input.isalpha():\n            return user_input\n        elif data_type == \"numeric\" and user_input.isdigit():\n            return user_input\n        elif data_type == \"alfanumeric\" and user_input.isalnum():\n            return user_input\n        elif data_type == \"float\":",
+        "peekOfCode": "def validate_input(msg, data_type):\n    while True:\n        user_input = input(msg)\n        if user_input.lower() == \"exit\":\n            input(Fore.RED + \"Canceled,press enter to continue...\")\n            return user_input\n        if data_type == \"alfabetic\" and user_input.isalpha():\n            return user_input\n        elif data_type == \"numeric\" and user_input.isdigit():\n            return user_input",
         "detail": "run",
         "documentation": {}
     },

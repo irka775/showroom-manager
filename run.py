@@ -98,6 +98,9 @@ def exist(path):
 def validate_input(msg, data_type):
     while True:
         user_input = input(msg)
+        if user_input.lower() == "exit":
+            input(Fore.RED + "Canceled,press enter to continue...")
+            return user_input
         if data_type == "alfabetic" and user_input.isalpha():
             return user_input
         elif data_type == "numeric" and user_input.isdigit():
@@ -130,7 +133,7 @@ def user_input(data_dict):
     """
     new_data = {}
     count = 0
-    print("Write exit to cancel this action ")
+    print(Fore.YELLOW + "Write exit to cancel this action. ")
     for key, value in data_dict.items():
 
         if key == "ID":
@@ -139,11 +142,8 @@ def user_input(data_dict):
             count += 1
             msg = f"{Fore.CYAN}{count}: Enter {key:<13}:\t".replace(" ", "-")
             data = validate_input(msg, value)
-
-            if data.lower() == "exit":
-                input(Fore.RED + "Canceled,press enter to continue...")
-                break
-
+            if data == "exit":
+                return data
             new_data[key] = data
     print()
     return new_data
@@ -264,7 +264,15 @@ def modify_car(target_car):
     """
     while not target_car.isdigit():
         target_car = input(Fore.RED + "Input should be a number, enter car-ID again: ")
-    new_dictionary = user_input(header)
+    while int(target_car) <= 0 or int(target_car) > int(car_count):
+        target_car = input(
+            Fore.RED
+            + f"Can't find this ID,please enter number from 0 to {car_count}:\n"
+        )
+    data = user_input(header)
+    if len(data) != len(header):
+        return
+    new_dictionary = data
     showroom_data.pop((int(target_car) - 1))
     showroom_data.insert(int(target_car) - 1, new_dictionary)
     save_data()

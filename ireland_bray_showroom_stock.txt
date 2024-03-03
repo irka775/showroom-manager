@@ -1,70 +1,12 @@
 =======================  Showroom data  =======================
 ID----------:	1
-Brand-------:	dfsdf
-Model-------:	fgdhg
-Fuel_Type---:	dfgh
-Engine_Size-:	534
-Transmission:	dfsg
-Year--------:	435
-Mileage-----:	345
-Color-------:	gd
-Price-------:	534
-===============================================================
-ID----------:	2
-Brand-------:	gdfg
-Model-------:	dfg
-Fuel_Type---:	fdg
-Engine_Size-:	453
-Transmission:	fdg
-Year--------:	345
-Mileage-----:	345
-Color-------:	dfg
-Price-------:	534
-===============================================================
-ID----------:	3
-Brand-------:	d
-Model-------:	d
-Fuel_Type---:	d
-Engine_Size-:	2
-Transmission:	e
-Year--------:	2
-Mileage-----:	2
-Color-------:	e
-Price-------:	2
-===============================================================
-ID----------:	4
-Brand-------:	sf
-Model-------:	sg
-Fuel_Type---:	gsdfg
-Engine_Size-:	234
-Transmission:	fsf
-Year--------:	324
+Brand-------:	dfgdf
+Model-------:	gdfg
+Fuel_Type---:	dfg
+Engine_Size-:	34
+Transmission:	sdgfdf
+Year--------:	432
 Mileage-----:	234
-Color-------:	sfd
-Price-------:	324
-===============================================================
-ID----------:	5
-Brand-------:	sfgdg
-===============================================================
-ID----------:	6
-Brand-------:	fdgs
-Model-------:	gss
-Fuel_Type---:	sfd
-Engine_Size-:	324
-Transmission:	sdfdf
-Year--------:	324
-Mileage-----:	234
-Color-------:	dfs
-Price-------:	234
-===============================================================
-ID----------:	7
-Brand-------:	sdfg
-Model-------:	sdfgdf
-Fuel_Type---:	dsfg
-Engine_Size-:	234
-Transmission:	fdsgdf
-Year--------:	234
-Mileage-----:	234
-Color-------:	sdg
-Price-------:	234
+Color-------:	sdf
+Price-------:	234234
 ===============================================================
