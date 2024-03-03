@@ -64,7 +64,6 @@ def msg_count_car():
     input(Fore.RED + "Press Enter to continue...")
 
 
-
 # ============================================================================
 
 
@@ -394,7 +393,12 @@ def main():
             elif choice == "2":
                 modify_car(input(Fore.CYAN + "Enter car id  to modify:\t"))
             elif choice == "3":
-                remove_car(input(Fore.YELLOW + "Enter car id for delete or write exit to cancell :\t"))
+                remove_car(
+                    input(
+                        Fore.YELLOW
+                        + "Enter car id for delete or write exit to cancell :\t"
+                    )
+                )
             elif choice == "4":
                 show_car()
             elif choice == "5":
