@@ -1,4 +1,6 @@
 import os
+import threading
+import time
 from colorama import Fore, Back, Style
 from time import sleep
 from num2words import num2words
@@ -43,6 +45,8 @@ header = {
     "Color": "alfabetic",
     "Price": "numeric",
 }
+
+
 # ============================================================================
 
 
@@ -126,14 +130,21 @@ def user_input(data_dict):
     """
     new_data = {}
     count = 0
+    print("Write exit to cancel this action ")
     for key, value in data_dict.items():
+
         if key == "ID":
             new_data[key] = ""
         else:
             count += 1
             msg = f"{Fore.CYAN}{count}: Enter {key:<13}:\t".replace(" ", "-")
+            data = validate_input(msg, value)
 
-            new_data[key] = validate_input(msg, value)
+            if data.lower() == "exit":
+                input(Fore.RED + "Canceled,press enter to continue...")
+                break
+
+            new_data[key] = data
     print()
     return new_data
 
@@ -150,6 +161,8 @@ def add_car(new_data):
     - after (optional): Parameter not used in the function but could be
       for specifying position.
     """
+    if len(new_data) != len(header):
+        return
 
     global car_count
     car_count = str(len(showroom_data) + 1)
@@ -167,6 +180,13 @@ def add_car(new_data):
 
         file.write(f"{separator_line}\n")
     showroom_data.append(new_data)
+    message = (
+        f"Look at that! Our showroom just got richer "
+        f"with its {num2words(car_count, to='ordinal_num')} car. "
+        "Press enter to continue this journey..."
+    )
+
+    input(Fore.LIGHTGREEN_EX + f"{message}")
 
 
 # ============================================================================
@@ -233,7 +253,7 @@ def save_data(file_path=file_name, cars=showroom_data):
 # ============================================================================
 
 
-def modify_car(target_car, new_dictionary):
+def modify_car(target_car):
     """
     Replaces an existing car's details in the showroom data with new details.
 
@@ -242,10 +262,15 @@ def modify_car(target_car, new_dictionary):
     - target_car (int): The ID of the car to modify.
     - new_dictionary (dict): A dictionary containing the new car details.
     """
-
+    while not target_car.isdigit():
+        target_car = input(Fore.RED + "Input should be a number, enter car-ID again: ")
+    new_dictionary = user_input(header)
     showroom_data.pop((int(target_car) - 1))
     showroom_data.insert(int(target_car) - 1, new_dictionary)
     save_data()
+    input(
+        Fore.RED + f"Id {target_car} successfully modified ,press enter to continue..."
+    )
 
 
 # ============================================================================
@@ -318,6 +343,8 @@ def welcome_message():
 
 
 # ============================================================================
+
+
 def main():
     """
     The main function to run the showroom manager program.
@@ -341,18 +368,8 @@ def main():
 
             if choice == "1":
                 add_car(user_input(header))
-                message = (
-                    f"Look at that! Our showroom just got richer "
-                    f"with its {num2words(car_count, to='ordinal_num')} car. "
-                    "Press enter to continue this journey..."
-                )
-
-                input(Fore.LIGHTGREEN_EX + f"{message}")
             elif choice == "2":
-                modify_car(
-                    input(Fore.CYAN + "Enter car id  to modify:\t"),
-                    user_input(header),
-                )
+                modify_car(input(Fore.CYAN + "Enter car id  to modify:\t"))
             elif choice == "3":
                 remove_car(input(Fore.YELLOW + "Enter car id for delete:\t"))
             elif choice == "4":

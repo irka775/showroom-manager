@@ -18,6 +18,32 @@
         "documentation": {}
     },
     {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "Fore",
         "importPath": "colorama",
         "description": "colorama",
@@ -39,14 +65,6 @@
         "description": "colorama",
         "isExtraImport": true,
         "detail": "colorama",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -142,7 +160,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def add_car(new_data):\n    \"\"\"\n    Adds a new car's details to the showroom data and writes it to a file.\n    Parameters:\n    - new_data (dict): A dictionary containing the car's details to add.\n    - after (optional): Parameter not used in the function but could be\n      for specifying position.\n    \"\"\"\n    global car_count\n    car_count = str(len(showroom_data) + 1)",
+        "peekOfCode": "def add_car(new_data):\n    \"\"\"\n    Adds a new car's details to the showroom data and writes it to a file.\n    Parameters:\n    - new_data (dict): A dictionary containing the car's details to add.\n    - after (optional): Parameter not used in the function but could be\n      for specifying position.\n    \"\"\"\n    if len(new_data) != len(header):\n        return",
         "detail": "run",
         "documentation": {}
     },
@@ -169,7 +187,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def modify_car(target_car, new_dictionary):\n    \"\"\"\n    Replaces an existing car's details in the showroom data with new details.\n    Parameters:\n    - file_name (str): The name of the file where the data is saved.\n    - target_car (int): The ID of the car to modify.\n    - new_dictionary (dict): A dictionary containing the new car details.\n    \"\"\"\n    showroom_data.pop((int(target_car) - 1))\n    showroom_data.insert(int(target_car) - 1, new_dictionary)",
+        "peekOfCode": "def modify_car(target_car):\n    \"\"\"\n    Replaces an existing car's details in the showroom data with new details.\n    Parameters:\n    - file_name (str): The name of the file where the data is saved.\n    - target_car (int): The ID of the car to modify.\n    - new_dictionary (dict): A dictionary containing the new car details.\n    \"\"\"\n    while not target_car.isdigit():\n        target_car = input(Fore.RED + \"Input should be a number, enter car-ID again: \")",
         "detail": "run",
         "documentation": {}
     },
