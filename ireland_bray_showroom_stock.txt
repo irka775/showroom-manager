@@ -1,0 +1,23 @@
+=======================  Showroom data  =======================
+ID----------:	1
+Brand-------:	dsf
+Model-------:	dsaf
+Fuel_Type---:	afsd
+Engine_Size-:	34
+Transmission:	sdf
+Year--------:	324
+Mileage-----:	123
+Color-------:	dsf
+Price-------:	123
+===============================================================
+ID----------:	2
+Brand-------:	sdf
+Model-------:	sdf
+Fuel_Type---:	sfd
+Engine_Size-:	432
+Transmission:	dsf
+Year--------:	342
+Mileage-----:	342
+Color-------:	f
+Price-------:	342
+===============================================================
