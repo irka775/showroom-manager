@@ -1,12 +1,23 @@
 =======================  Showroom data  =======================
 ID----------:	1
-Brand-------:	dfgdf
-Model-------:	gdfg
-Fuel_Type---:	dfg
-Engine_Size-:	34
-Transmission:	sdgfdf
-Year--------:	432
+Brand-------:	wef
+Model-------:	wef
+Fuel_Type---:	wef
+Engine_Size-:	3
+Transmission:	dwf
+Year--------:	123
+Mileage-----:	123
+Color-------:	sfd
+Price-------:	123
+===============================================================
+ID----------:	2
+Brand-------:	shgx
+Model-------:	sfgd
+Fuel_Type---:	dfzhg
+Engine_Size-:	234
+Transmission:	sfgd
+Year--------:	234
 Mileage-----:	234
-Color-------:	sdf
-Price-------:	234234
+Color-------:	fxg
+Price-------:	234
 ===============================================================

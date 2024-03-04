@@ -268,7 +268,8 @@ def modify_car(target_car):
         )
     while int(target_car) <= 0 or int(target_car) > int(car_count):
         target_car = input(
-            Fore.RED + f"Can't find this ID,enter number from 0 to {car_count}:\n"
+            Fore.RED + "Can't find this ID,enter"
+            + " number from 0 to {car_count}:\n"
         )
     data = user_input(header)
     if len(data) != len(header):
@@ -277,10 +278,12 @@ def modify_car(target_car):
     showroom_data.pop((int(target_car) - 1))
     showroom_data.insert(int(target_car) - 1, new_dictionary)
     save_data()
-    input(Fore.RED + f"Id {target_car} successfully modified,press enter to continue.")
+    input(Fore.RED + f"Id {target_car} successfully modified,"
+          + "press enter to continue.")
 
 
 # ============================================================================
+
 def remove_car(target_car):
     """
     Removes a car from the showroom data based on its ID.
@@ -295,7 +298,7 @@ def remove_car(target_car):
     while int(target_car) > int(car_count) or int(target_car) <= 0:
         target_car = input(
             Fore.RED + "Can't find this ID,enter number"
-            +f" from 0 to {car_count}:\n"
+            + f" from 0 to {car_count}:\n"
         )
 
     showroom_data.pop((int(target_car) - 1))
@@ -393,7 +396,8 @@ def main():
             elif choice == "3":
                 remove_car(
                     input(
-                        Fore.YELLOW + "Enter car id for delete or exit to cancell :\t"
+                        Fore.YELLOW + "Enter car id for delete"
+                        + "or exit to cancell :\t"
                     )
                 )
             elif choice == "4":
