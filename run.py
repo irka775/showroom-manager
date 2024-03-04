@@ -240,6 +240,7 @@ def save_data(file_path=file_name, cars=showroom_data):
         file.write(f"{header_line}\n")
         for car in cars:
             local_car_count += 1
+            car["ID"] = str(local_car_count)
             for key, value in car.items():
                 format_key = f"{key:<12}".replace(" ", "-")
                 if key == "ID":
@@ -303,7 +304,6 @@ def remove_car(target_car):
 
     showroom_data.pop((int(target_car) - 1))
     save_data()
-    car_count = len(showroom_data)
     input(
         Fore.RED + f"Id {target_car} successfully deleted ,press enter"
         " to continue..."
